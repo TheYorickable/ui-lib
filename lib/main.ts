@@ -4,3 +4,4 @@ export { Header } from "./components/header";
 export { Input } from "./components/input";
 export { Label } from "./components/label";
 export { Link } from "./components/link";
+export { Title } from "./components/typo/title";
