@@ -25,13 +25,11 @@ export const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
       title={title}
       className={`${styles.header} ${className}`}
       {...restProps}
+      onClick={() => {
+        navigate("/");
+      }}
     >
-      <div
-        className={styles.title}
-        onClick={() => {
-          navigate("/");
-        }}
-      >
+      <div className={styles.title}>
         <h3>{children}</h3>
       </div>
       <div className={styles.date}>
