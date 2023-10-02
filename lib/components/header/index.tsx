@@ -1,4 +1,5 @@
 import { NavigateFunction } from "react-router-dom";
+import { Title } from "../typo/title";
 
 import styles from "./styles.module.css";
 
@@ -30,7 +31,7 @@ export const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
       }}
     >
       <div className={styles.title}>
-        <h3>{children}</h3>
+        <Title>{children}</Title>
       </div>
       <div className={styles.date}>
         <span>{time}</span>

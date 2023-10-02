@@ -11,3 +11,7 @@
 
   --c-light-blue: royalblue;
 }
+
+* {
+  box-sizing: border-box;
+}

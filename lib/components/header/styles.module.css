@@ -1,40 +1,36 @@
-header {
+.header {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   padding: 0 1rem;
-  border-bottom: 1px solid var(--c-dark-grey);
+  border-bottom: 2px solid var(--c-accent);
+  background: var(--c-bg-primary);
 
   .title {
     flex: 1;
   }
 
   &:hover {
-    & h3 span {
-      transform: scaleX(1);
+    & :is(h1, h2, h3, h4, h5, h6) span {
       opacity: 1;
-      width: 60px;
+      max-width: 100px;
     }
 
     & .date {
       opacity: 1;
+      color: var(--c-accent);
     }
   }
 
-  & h3 {
-    font-weight: 500;
-    font-size: x-large;
+  & :is(h1, h2, h3, h4, h5, h6) {
     margin: 1rem 0;
-    color: var(--c-text-main);
-    position: relative;
+    color: var(--c-text-primary);
 
     > span {
-      width: 1px;
-      transform-origin: left;
-      transform: scaleX(0);
-      opacity: 0;
       display: inline-block;
-      transition: all 0.22s cubic-bezier(0.075, 0.82, 0.165, 1);
+      opacity: 0;
+      max-width: 0px;
+      transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   }
 
@@ -43,9 +39,23 @@ header {
     flex-direction: row;
     align-items: center;
     font-weight: 500;
-    color: var(--c-link);
-    opacity: 0.1;
+    color: var(-c-text-secondary);
     font-size: small;
-    transition: opacity 0.2s ease;
+    opacity: 0.25;
+    transition: opacity 0.2s ease, color 0.2s ease;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    background-color: var(--c-dark-bg-dark);
+
+    & h3 {
+      color: var(--c-dark-text-primary);
+    }
+  }
+
+  .date {
+    color: var(--c-dark-text-secondary);
   }
 }
