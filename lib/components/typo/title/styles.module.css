@@ -10,6 +10,7 @@
 
   &:is(h1) {
     font-size: xx-large;
+    margin: 1.6rem 0;
   }
   &:is(h2) {
     font-size: x-large;
